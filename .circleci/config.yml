@@ -4,7 +4,7 @@ jobs:
   build_and_test:
     docker:
       - image: docker:18.06.1-ce-git
-    working_directory: ~/CircleCI/airflow-demo
+    working_directory: ~/usr/local/airflow
     steps:
       - checkout
       - setup_remote_docker:
@@ -12,7 +12,7 @@ jobs:
       - run: 
           name: Build docker image
           command: |
-            docker build -t dhanu001/airflow-demo .
+            docker build -t puckel/airflow .
       - run: 
           name: Test docker image
           command: |
