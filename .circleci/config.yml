@@ -12,7 +12,7 @@ jobs:
       - run: 
           name: Build docker image
           command: |
-            docker build -t puckel/docker-airflow .
+            docker build -t puckel/docker-airflow --file ./Dockefile .
       - run: 
           name: Test docker image
           command: |
